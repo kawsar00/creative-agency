@@ -1,0 +1,6 @@
+.header-container {
+  /* background-image: linear-gradient(-4deg, transparent 55%, #FBD062 45%); */
+  background: url(../../../images/headerBg.png);
+  padding-top: 15px;
+  background-size: cover;
+}

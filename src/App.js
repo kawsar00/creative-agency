@@ -1,25 +1,48 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Switch, Route, } from "react-router-dom";
+import { createContext } from 'react';
+import { useState } from 'react';
+import NoMatch from './Components/NoMatch/NoMatch';
+import Login from './Components/Login/Login';
+import Home from './Components/Home/Home/Home';
+
+
+export const UserContext = createContext()
 
 function App() {
+  const [loggedInUser, setLoggedInUser] = useState({})
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <UserContext.Provider value={{ loggedInUser, setLoggedInUser }}>
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <Home></Home>
+          </Route>
+          {/* <Route path="/">
+
+          </Route>
+          <Route path="/">
+
+          </Route>
+          <Route path="/">
+
+          </Route>
+          <Route path="/">
+
+          </Route>
+          <Route path="/">
+
+          </Route> */}
+          <Route path="/login">
+            <Login></Login>
+          </Route>
+          <Route path="*">
+            <NoMatch></NoMatch>
+          </Route>
+        </Switch>
+      </Router>
+    </UserContext.Provider>
   );
 }
 
