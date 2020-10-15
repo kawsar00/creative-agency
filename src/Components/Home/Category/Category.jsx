@@ -9,7 +9,7 @@ import uber from '../../../logos/uber.png';
 
 const Category = () => {
   return (
-    <section className="container-fluid category-container d-flex justify-content-center mt-5">
+    <section className="container-fluid category-container d-flex justify-content-center my-5">
       <div className="row"></div>
       <div className="col-md-2 col-4">
         <span><img src={slack} alt=""/></span>
