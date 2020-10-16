@@ -4,9 +4,10 @@ import * as firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from './firebaseConfig'
 import googleImg from '../../logos/google.png';
-import logo from '../../logos/google.png'
 import { Link, useHistory, useLocation } from 'react-router-dom';
 import { UserContext } from '../../App';
+import logo from '../../logos/logo.png'
+
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
@@ -30,7 +31,7 @@ const Login = () => {
           isSignIn: true,
         }
         setLoggedInUser(signInUser)
-        history.replace(from);
+        storeAuthToken();
       })
       .catch(error => {
         const errorCode = error.code;
@@ -39,11 +40,21 @@ const Login = () => {
       });
   }
 
+  const storeAuthToken = () => {
+    firebase.auth().currentUser.getIdToken(/* forceRefresh */ true)
+    .then(function(idToken) {
+      sessionStorage.setItem('token', idToken)
+      history.replace(from);
+    }).catch(function(error) {
+      // Handle error
+    });
+  }
+
   return (
     <div className="container-fluid text-center my-5">
       <Link to="/home"><img className="mb-5" height="60" src={logo} alt="" /></Link>
       <div style={{ height: '70vh' }} className=" w-50 box-style m-auto d-flex align-items-center justify-content-center">
-        <div className="">
+        <div className="box-border">
           <h3 className="font-weight-bold text-center mb-4">Login With</h3>
           <div style={{ cursor: 'pointer' }} onClick={googleSignIn} className="logIn d-flex">
             <span><img style={{ width: '23px' }} src={googleImg} alt="" /></span>

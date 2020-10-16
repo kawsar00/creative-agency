@@ -6,6 +6,8 @@ import { useState } from 'react';
 import NoMatch from './Components/NoMatch/NoMatch';
 import Login from './Components/Login/Login';
 import Home from './Components/Home/Home/Home';
+import Dashboard from './Components/Dashboard/Dashboard/Dashboard';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 
 
 export const UserContext = createContext()
@@ -19,19 +21,22 @@ function App() {
           <Route exact path="/">
             <Home></Home>
           </Route>
+          <Route path="/home">
+            <Home></Home>
+          </Route>
+          <Route path="/dashboard">
+            <Dashboard></Dashboard>
+          </Route>
           {/* <Route path="/">
 
-          </Route>
-          <Route path="/">
+          </Route> */}
+          {/* <Route path="/">
 
-          </Route>
-          <Route path="/">
+          </Route> */}
+          {/* <Route path="/">
 
-          </Route>
-          <Route path="/">
-
-          </Route>
-          <Route path="/">
+          </Route> */}
+          {/* <Route path="/">
 
           </Route> */}
           <Route path="/login">

@@ -6,3 +6,7 @@
   padding: 10px;
   cursor: pointer;
 }
+.box-border {
+  border: 1px solid #c9c9c9;
+  padding: 115px 25px;
+}
