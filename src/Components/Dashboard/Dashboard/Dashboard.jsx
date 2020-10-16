@@ -1,5 +1,5 @@
 import React from 'react';
-import DashboardNavbar from '../DashboardNavbar/DashboardNavbar';
+import DashboardSidebar from '../DashboardSidebar/DashboardSidebar';
 
 
 
@@ -7,7 +7,7 @@ import DashboardNavbar from '../DashboardNavbar/DashboardNavbar';
 const Dashboard = () => {
   return (
     <div>
-      <DashboardNavbar></DashboardNavbar>
+      <DashboardSidebar></DashboardSidebar>
     </div>
   );
 };

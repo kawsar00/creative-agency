@@ -8,6 +8,8 @@ import Login from './Components/Login/Login';
 import Home from './Components/Home/Home/Home';
 import Dashboard from './Components/Dashboard/Dashboard/Dashboard';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import Order from './Components/Dashboard/Order/Order';
+import Review from './Components/Dashboard/Review/Review';
 
 
 export const UserContext = createContext()
@@ -24,24 +26,25 @@ function App() {
           <Route path="/home">
             <Home></Home>
           </Route>
-          <Route path="/dashboard">
-            <Dashboard></Dashboard>
-          </Route>
-          {/* <Route path="/">
-
-          </Route> */}
-          {/* <Route path="/">
-
-          </Route> */}
-          {/* <Route path="/">
-
-          </Route> */}
-          {/* <Route path="/">
-
-          </Route> */}
           <Route path="/login">
             <Login></Login>
           </Route>
+          <Route path="/dashboard">
+            <Dashboard></Dashboard>
+          </Route>
+          <Route path="/">
+            <Order></Order>
+          </Route>
+          <Route path="/review">
+            <Review></Review>
+          </Route>
+          {/* <Route path="/">
+
+          </Route> */}
+          {/* <Route path="/">
+
+          </Route> */}
+          
           <Route path="*">
             <NoMatch></NoMatch>
           </Route>

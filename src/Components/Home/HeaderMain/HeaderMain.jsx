@@ -4,7 +4,7 @@ import frame from '../../../logos/Frame.png'
 
 const HeaderMain = () => {
   return (
-    <main style={{height:'550px'}} className="row d-flex align-items-center"> 
+    <main style={{height:'615px', marginTop:'-70px'}} className="row d-flex align-items-center"> 
     <div className="col-md-4 offset-md-1">
       <h1 style={{fontSize: '48px'}} className="font-weight-bold">Let’s Grow Your <br/> Brand To The <br/> Next Level</h1>
       <p className="text-dark py-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam alias magni, quidem sit sunt magnam.</p>
