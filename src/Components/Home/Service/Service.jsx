@@ -15,7 +15,7 @@ const Service = () => {
     <section className="py-5">
       <h2 className='text-center font-weight-bold'>Provide awesome <span style={{color: '#7AB259'}} >services</span></h2>
       <div className="d-flex justify-content-center mt-4">
-      <div className="row w-75">
+      <div style={{width: '85%'}} className="row">
         {
          serviceData.map(service => <ServiceCard service={service}></ServiceCard>)
         }

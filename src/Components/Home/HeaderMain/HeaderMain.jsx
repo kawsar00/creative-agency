@@ -10,7 +10,7 @@ const HeaderMain = () => {
       <p className="text-dark py-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam alias magni, quidem sit sunt magnam.</p>
       <Link to="/"><button className="btn btn-dark px-4">Hire us</button></Link>
     </div>
-    <div className="col-md-6">
+    <div className="col-md-6 d-none d-md-block">
       <img src={frame} alt="" className="img-fluid"/>
     </div>
     </main>

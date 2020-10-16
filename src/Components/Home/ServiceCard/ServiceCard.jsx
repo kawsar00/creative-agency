@@ -2,7 +2,7 @@ import React from 'react';
 
 const ServiceCard = ({service}) => {
   return (
-    <div className="col-md-4 ">
+    <div className="col-md-4 col-sm-12">
       <div style={{border:'none'}} className="card my-3 shadow">
         <div className="card-body text-center">
           <img style={{width:'80px'}} src={service.img} alt="" className="img-fluid"/>
