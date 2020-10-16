@@ -3,7 +3,7 @@ import './DashboardSidebar.css'
 import { Link } from 'react-router-dom';
 import logo from '../../../logos/logo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCommentDots, faInbox, faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+import { faCommentDots, faInbox, faPlus, faShoppingCart, faUser } from '@fortawesome/free-solid-svg-icons'
 
 const DashboardSidebar = () => {
   return (
@@ -14,10 +14,22 @@ const DashboardSidebar = () => {
           <Link className="icon-style" to="/order"><FontAwesomeIcon className="mr-2" icon={faShoppingCart} /> Order</Link>
         </li>
         <li className="mb-2">
-          <Link className="icon-style" to="/service"><FontAwesomeIcon className="mr-2 " icon={faInbox} /> Service List</Link>
+          <Link className="icon-style" to="/serviceData"><FontAwesomeIcon className="mr-2 " icon={faInbox} /> Service List</Link>
         </li>
         <li className="mb-2">
           <Link className="icon-style" to="/review"><FontAwesomeIcon className="mr-2 " icon={faCommentDots} /> Review</Link>
+        </li>
+        
+
+        
+        <li className="mb-2">
+          <Link className="icon-style" to="/serviceList"><FontAwesomeIcon className="mr-2 " icon={faInbox} /> Service List</Link>
+        </li>
+        <li className="mb-2">
+          <Link className="icon-style" to="/AddService"><FontAwesomeIcon className="mr-2" icon={faPlus} /> Add Service</Link>
+        </li>
+        <li className="mb-2">
+          <Link className="icon-style" to="/makeAdmin"><FontAwesomeIcon className="mr-2 " icon={faUser} /> Make Admin</Link>
         </li>
       </ul>
     </div>

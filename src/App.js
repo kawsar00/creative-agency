@@ -10,6 +10,10 @@ import Dashboard from './Components/Dashboard/Dashboard/Dashboard';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import Order from './Components/Dashboard/Order/Order';
 import Review from './Components/Dashboard/Review/Review';
+import Services from './Components/Dashboard/Services/Services';
+import ServiceList from './Components/AdminDashboard/ServiceList/ServiceList';
+import AddService from './Components/AdminDashboard/AddService/AddService';
+import MakeAdmin from './Components/AdminDashboard/MakeAdmin/MakeAdmin';
 
 
 export const UserContext = createContext()
@@ -35,16 +39,21 @@ function App() {
           <Route path="/order">
             <Order></Order>
           </Route>
+          <Route path="/serviceData">
+            <Services></Services>
+          </Route>
           <Route path="/review">
             <Review></Review>
           </Route>
-          {/* <Route path="/">
-
-          </Route> */}
-          {/* <Route path="/">
-
-          </Route> */}
-          
+          <Route path="/serviceList">
+              <ServiceList></ServiceList>
+          </Route>
+          <Route path="/addService">
+            <AddService></AddService>
+          </Route>
+          <Route path="/makeAdmin">
+            <MakeAdmin></MakeAdmin>
+          </Route>
           <Route path="*">
             <NoMatch></NoMatch>
           </Route>
