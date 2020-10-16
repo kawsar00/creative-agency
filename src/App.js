@@ -32,7 +32,7 @@ function App() {
           <Route path="/dashboard">
             <Dashboard></Dashboard>
           </Route>
-          <Route path="/">
+          <Route path="/order">
             <Order></Order>
           </Route>
           <Route path="/review">
