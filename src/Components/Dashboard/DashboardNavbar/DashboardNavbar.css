@@ -1,0 +1,11 @@
+.icon-style {
+  color: black;
+}
+.icon-style:focus {
+  color: green;
+  font-weight: bold;
+}
+.icon-style:hover {
+  text-decoration: none;
+  color: green;
+}
