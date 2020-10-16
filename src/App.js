@@ -33,27 +33,27 @@ function App() {
           <Route path="/login">
             <Login></Login>
           </Route>
-          <Route path="/dashboard">
+          <PrivateRoute path="/dashboard">
             <Dashboard></Dashboard>
-          </Route>
-          <Route path="/order">
+          </PrivateRoute>
+          <PrivateRoute path="/order">
             <Order></Order>
-          </Route>
-          <Route path="/serviceData">
+          </PrivateRoute>
+          <PrivateRoute path="/serviceData">
             <Services></Services>
-          </Route>
-          <Route path="/review">
+          </PrivateRoute>
+          <PrivateRoute path="/review">
             <Review></Review>
-          </Route>
-          <Route path="/serviceList">
+          </PrivateRoute>
+          <PrivateRoute path="/serviceList">
               <ServiceList></ServiceList>
-          </Route>
-          <Route path="/addService">
+          </PrivateRoute>
+          <PrivateRoute path="/addService">
             <AddService></AddService>
-          </Route>
-          <Route path="/makeAdmin">
+          </PrivateRoute>
+          <PrivateRoute path="/makeAdmin">
             <MakeAdmin></MakeAdmin>
-          </Route>
+          </PrivateRoute>
           <Route path="*">
             <NoMatch></NoMatch>
           </Route>

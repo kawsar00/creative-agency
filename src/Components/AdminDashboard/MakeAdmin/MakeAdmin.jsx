@@ -7,7 +7,19 @@ import DashboardSidebar from '../../Dashboard/DashboardSidebar/DashboardSidebar'
 const MakeAdmin = () => {
   const { loggedInUser } = useContext(UserContext)
   const { register, handleSubmit, errors } = useForm();
-  const onSubmit = data => console.log(data);
+  const onSubmit = data => {
+    fetch('http://localhost:5000/addAdmin', {
+      method: "POST",
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify(data)
+    })
+    .then(res => res.json())
+    .then(success => {
+      if (success) {
+        alert('admin created successfully')
+      }
+    })
+  };
   return (
     <section className="container-fluid row order-container pt-3">
       <DashboardSidebar />
