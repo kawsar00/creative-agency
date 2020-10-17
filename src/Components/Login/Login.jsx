@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import './Login.css';
 import * as firebase from "firebase/app";
 import "firebase/auth";

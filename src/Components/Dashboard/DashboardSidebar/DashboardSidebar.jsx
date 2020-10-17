@@ -18,7 +18,7 @@ const DashboardSidebar = () => {
     })
       .then(res => res.json())
       .then(data => setIsAdmin(data));
-  }, [])
+  }, [loggedInUser.email])
 
   return (
     <div className="sidebar d-flex flex-column justify-content-between col-md-2 col-sm-12">
