@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import './Login.css';
 import * as firebase from "firebase/app";
 import "firebase/auth";
@@ -13,7 +13,7 @@ import logo from '../../logos/logo.png'
 firebase.initializeApp(firebaseConfig);
 
 const Login = () => {
-  const {setLoggedInUser} = useContext(UserContext)
+  const { setLoggedInUser } = useContext(UserContext)
   const history = useHistory();
   const location = useLocation();
 
@@ -24,15 +24,17 @@ const Login = () => {
   const googleSignIn = () => {
     firebase.auth().signInWithPopup(provider)
       .then(result => {
-        const {displayName, email, photoURL} = result.user;
+        const { displayName, email, photoURL } = result.user;
         const signInUser = {
           name: displayName,
           email: email,
           img: photoURL,
           isSignIn: true,
         }
-        setLoggedInUser(signInUser)
         storeAuthToken();
+        setLoggedInUser(signInUser)
+        history.replace(from);
+
       })
       .catch(error => {
         const errorCode = error.code;
@@ -43,13 +45,14 @@ const Login = () => {
 
   const storeAuthToken = () => {
     firebase.auth().currentUser.getIdToken(/* forceRefresh */ true)
-    .then(function(idToken) {
-      sessionStorage.setItem('token', idToken)
-      history.replace(from);
-    }).catch(function(error) {
-      // Handle error
-    });
+      .then(function (idToken) {
+        sessionStorage.setItem('token', idToken)
+        // history.replace(from);
+      }).catch(function (error) {
+        // Handle error
+      });
   }
+
 
   return (
     <div className="container-fluid text-center my-5">

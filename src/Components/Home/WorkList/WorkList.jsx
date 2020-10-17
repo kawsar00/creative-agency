@@ -25,16 +25,16 @@ const WorkList = () => {
       <div className="pt-4"></div>
       <Slider {...settings}>
         <div>
-          <img style={{width:'90%'}} class="d-block" src={carousel1} alt="First slide" />
+          <img style={{width:'90%'}} className="d-block" src={carousel1} alt="First slide" />
         </div>
         <div>
-          <img style={{width:'90%'}} class="d-block" src={carousel2} alt="Second slide" />
+          <img style={{width:'90%'}} className="d-block" src={carousel2} alt="Second slide" />
         </div>
         <div>
-          <img style={{width:'90%'}} class="d-block" src={carousel3} alt="Third slide" />
+          <img style={{width:'90%'}} className="d-block" src={carousel3} alt="Third slide" />
         </div>
         <div>
-          <img style={{width:'90%'}} class="d-block" src={carousel2} alt="Second slide" />
+          <img style={{width:'90%'}} className="d-block" src={carousel2} alt="Second slide" />
         </div>
       </Slider>
     </section>

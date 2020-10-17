@@ -25,7 +25,7 @@ const DashboardSidebar = () => {
       <Link to="/home"><img className="mb-5" height="50" src={logo} alt="" /></Link>
       <ul className="list-unstyled">
         <li className="mb-2">
-          <Link className="icon-style" to="/order"><FontAwesomeIcon className="mr-2" icon={faShoppingCart} /> Order</Link>
+          <Link className="icon-style" to="/home"><FontAwesomeIcon className="mr-2" icon={faShoppingCart} /> Order</Link>
         </li>
         <li className="mb-2">
           <Link className="icon-style" to="/serviceData"><FontAwesomeIcon className="mr-2 " icon={faInbox} /> Service List</Link>
