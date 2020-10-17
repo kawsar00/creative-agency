@@ -7,7 +7,7 @@ import { faCommentDots, faInbox, faPlus, faShoppingCart, faUser } from '@fortawe
 import { UserContext } from '../../../App';
 
 const DashboardSidebar = () => {
-  const { loggedInUser, setLoggedInUser } = useContext(UserContext)
+  const { loggedInUser } = useContext(UserContext)
   const [isAdmin, setIsAdmin] = useState(false)
 
   useEffect(() => {
