@@ -21,20 +21,11 @@ const DashboardSidebar = () => {
   }, [])
 
   return (
-    <div className="sidebar d-flex flex-column justify-content-between col-md-3 col-sm-12">
+    <div className="sidebar d-flex flex-column justify-content-between col-md-2 col-sm-12">
       <Link to="/home"><img className="mb-5" height="50" src={logo} alt="" /></Link>
       <ul className="list-unstyled">
-        <li className="mb-2">
-          <Link className="icon-style" to="/home"><FontAwesomeIcon className="mr-2" icon={faShoppingCart} /> Order</Link>
-        </li>
-        <li className="mb-2">
-          <Link className="icon-style" to="/serviceData"><FontAwesomeIcon className="mr-2 " icon={faInbox} /> Service List</Link>
-        </li>
-        <li className="mb-2">
-          <Link className="icon-style" to="/review"><FontAwesomeIcon className="mr-2 " icon={faCommentDots} /> Review</Link>
-        </li>
         {
-          isAdmin && <div>
+          isAdmin ? <div>
             <li className="mb-2">
               <Link className="icon-style" to="/serviceList"><FontAwesomeIcon className="mr-2 " icon={faInbox} /> Service List</Link>
             </li>
@@ -45,7 +36,18 @@ const DashboardSidebar = () => {
               <Link className="icon-style" to="/makeAdmin"><FontAwesomeIcon className="mr-2 " icon={faUser} /> Make Admin</Link>
             </li>
           </div>
-
+            :
+            <div>
+              <li className="mb-2">
+                <Link className="icon-style" to="/home"><FontAwesomeIcon className="mr-2" icon={faShoppingCart} /> Order</Link>
+              </li>
+              <li className="mb-2">
+                <Link className="icon-style" to="/serviceData"><FontAwesomeIcon className="mr-2 " icon={faInbox} /> Service List</Link>
+              </li>
+              <li className="mb-2">
+                <Link className="icon-style" to="/review"><FontAwesomeIcon className="mr-2 " icon={faCommentDots} /> Review</Link>
+              </li>
+            </div>
         }
       </ul>
     </div>

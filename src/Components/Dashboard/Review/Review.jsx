@@ -7,11 +7,25 @@ import DashboardSidebar from '../DashboardSidebar/DashboardSidebar';
 const Review = () => {
   const { loggedInUser } = useContext(UserContext)
   const { register, handleSubmit, errors } = useForm();
-  const onSubmit = data => console.log(data);
+  const onSubmit = data => {
+    fetch('http://localhost:5000/addReview', {
+      method: 'POST',
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+      body: JSON.stringify(data),
+    })
+      .then(res => res.json())
+      .then(data => {
+        if (data) {
+          alert('Review added successfully')
+        }
+      })
+  }
   return (
     <section className="container-fluid row order-container pt-3">
       <DashboardSidebar />
-      <div className="col-md-9 col-sm-12">
+      <div className="col-md-10 col-sm-12">
         <div className="d-flex justify-content-between">
           <h3>Order</h3>
           <h4>{loggedInUser.name}</h4>
@@ -31,7 +45,7 @@ const Review = () => {
               {errors.name && <span className="text-danger">This field is required</span>}
             </div>
             <div className="form-group">
-            <button type="submit" className="btn btn-dark py-2 w-25">Submit</button>
+              <button type="submit" className="btn btn-dark py-2 w-25">Submit</button>
             </div>
           </form>
         </div>

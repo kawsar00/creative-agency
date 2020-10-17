@@ -32,15 +32,12 @@ const Navbar = () => {
             <a className="nav-link mr-5" href="/#">Contact Us</a>
           </li>
           <li className="nav-item">
-
-            <Link to="/login"><button className="btn btn-dark px-4">Login</button></Link>
-
-            {/* {
+            {
               loggedInUser.isSignIn ?
               <Link onClick={() => setLoggedInUser({})} to="/home"><button className="btn btn-dark px-4">Log Out</button></Link>
               :
               <Link to="/login"><button className="btn btn-dark px-4">Login</button></Link>
-            } */}
+            }
           </li>
         </ul>
       </div>

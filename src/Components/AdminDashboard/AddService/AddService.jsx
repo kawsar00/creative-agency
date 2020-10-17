@@ -41,7 +41,7 @@ const AddService = () => {
   return (
     <section className="container-fluid row pt-3">
       <DashboardSidebar />
-      <div className="col-md-9 col-sm-12">
+      <div className="col-md-10 col-sm-12">
         <div className="d-flex justify-content-between">
           <h3>Order</h3>
           <h4>{loggedInUser.name}</h4>

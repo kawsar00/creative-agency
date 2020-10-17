@@ -31,7 +31,6 @@ const Login = () => {
           img: photoURL,
           isSignIn: true,
         }
-        storeAuthToken();
         setLoggedInUser(signInUser)
         history.replace(from);
 
@@ -42,17 +41,6 @@ const Login = () => {
         console.log(errorCode, errorMessage);
       });
   }
-
-  const storeAuthToken = () => {
-    firebase.auth().currentUser.getIdToken(/* forceRefresh */ true)
-      .then(function (idToken) {
-        sessionStorage.setItem('token', idToken)
-        // history.replace(from);
-      }).catch(function (error) {
-        // Handle error
-      });
-  }
-
 
   return (
     <div className="container-fluid text-center my-5">
