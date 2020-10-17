@@ -19,23 +19,23 @@ const AddService = () => {
   }
 
   const handleSubmit = () => {
-    // const formData = new FormData()
-    // console.log(info);
-    // formData.append('file', file);
-    // formData.append('name', info.name);
-    // formData.append('email', info.email);
+    const formData = new FormData()
+    console.log(info);
+    formData.append('file', file);
+    formData.append('title', info.title);
+    formData.append('description', info.description);
 
-    // fetch('https://salty-plateau-71286.herokuapp.com/addADoctor', {
-    //     method: 'POST',
-    //     body: formData
-    // })
-    //     .then(response => response.json())
-    //     .then(data => {
-    //         console.log(data)
-    //     })
-    //     .catch(error => {
-    //         console.error(error)
-    //     })
+    fetch('http://localhost:5000/addService', {
+        method: 'POST',
+        body: formData
+    })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data)
+        })
+        .catch(error => {
+            console.error(error)
+        })
   }
 
   return (
@@ -62,7 +62,7 @@ const AddService = () => {
                 </div>
                 <div className="form-group col-md-6">
                   <label htmlFor="exampleInputPassword1">Description</label>
-                  <textarea onBlur={handleBlur} name="details" className="form-control" id="" cols="15" rows="5" placeholder="Enter Description" required></textarea>
+                  <textarea onBlur={handleBlur} name="description" className="form-control" id="" cols="15" rows="5" placeholder="Enter Description" required></textarea>
                 </div>
               </div>
             </div>
