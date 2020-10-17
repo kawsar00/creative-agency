@@ -12,7 +12,7 @@ const Order = () => {
 
   const [serviceData, setServiceData] = useState([])
   useEffect(() => {
-    fetch('http://localhost:5000/services')
+    fetch('https://murmuring-lowlands-09512.herokuapp.com/services')
       .then(res => res.json())
       .then(data => setServiceData(data))
   }, [])
@@ -20,7 +20,7 @@ const Order = () => {
   const serviceItem = serviceData.find(data => data._id === id)
 
   const onSubmit = data => {
-    fetch('http://localhost:5000/addOrder', {
+    fetch('https://murmuring-lowlands-09512.herokuapp.com/addOrder', {
       method: 'POST',
       headers: {
         'Content-type': 'application/json; charset=UTF-8',

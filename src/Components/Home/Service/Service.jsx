@@ -5,7 +5,7 @@ import ServiceCard from '../ServiceCard/ServiceCard';
 const Service = () => {
   const [serviceData, setServiceData] = useState([])
   useEffect(() => {
-    fetch('http://localhost:5000/services')
+    fetch('https://murmuring-lowlands-09512.herokuapp.com/services')
       .then(res => res.json())
       .then(data => setServiceData(data))
   }, [])

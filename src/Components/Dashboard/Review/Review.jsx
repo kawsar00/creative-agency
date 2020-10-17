@@ -8,7 +8,7 @@ const Review = () => {
   const { loggedInUser } = useContext(UserContext)
   const { register, handleSubmit, errors } = useForm();
   const onSubmit = data => {
-    fetch('http://localhost:5000/addReview', {
+    fetch('https://murmuring-lowlands-09512.herokuapp.com/addReview', {
       method: 'POST',
       headers: {
         'Content-type': 'application/json; charset=UTF-8',

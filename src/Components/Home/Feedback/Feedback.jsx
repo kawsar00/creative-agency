@@ -10,7 +10,7 @@ const Feedback = () => {
 
 
   useEffect(() => {
-    fetch('http://localhost:5000/reviews')
+    fetch('https://murmuring-lowlands-09512.herokuapp.com/reviews')
       .then(res => res.json())
       .then(data => {
         setReviewData(data)
@@ -23,7 +23,7 @@ const Feedback = () => {
         <h2 className='text-center font-weight-bold py-5'>Clients <span style={{ color: '#7AB259' }} >Feedback</span></h2>
         <div className="row pt-5">
           {
-            reviewData.map(feedback => <FeedbackPost feedback={feedback}key={feedback._id}></FeedbackPost>)
+            reviewData.map(feedback => <FeedbackPost feedback={feedback} key={feedback._id}></FeedbackPost>)
           }
         </div>
       </div>
