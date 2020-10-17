@@ -13,12 +13,12 @@ const MakeAdmin = () => {
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify(data)
     })
-    .then(res => res.json())
-    .then(success => {
-      if (success) {
-        alert('admin created successfully')
-      }
-    })
+      .then(res => res.json())
+      .then(success => {
+        if (success) {
+          alert('admin created successfully')
+        }
+      })
   };
   return (
     <section className="container-fluid row order-container pt-3">
@@ -26,7 +26,10 @@ const MakeAdmin = () => {
       <div className="col-md-9 col-sm-12">
         <div className="d-flex justify-content-between">
           <h3>Order</h3>
-          <h4>{loggedInUser.name}</h4>
+          <div className="d-flex">
+            <img style={{ height: '35px' }} src={loggedInUser.img} alt="" className="img-img-fluid rounded mr-2" />
+            <h4>{loggedInUser.name}</h4>
+          </div>
         </div>
         <div style={{ position: "absolute", left: 0, backgroundColor: "#F4F7FC" }} className="p-5 w-100">
           <form style={{ borderRadius: '15px' }} className="bg-white p-4 w-75" onSubmit={handleSubmit(onSubmit)}>

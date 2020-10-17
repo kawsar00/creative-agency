@@ -4,11 +4,11 @@ import { UserContext } from '../../../App';
 import logo from '../../../logos/logo.png'
 
 const Navbar = () => {
-  const {loggedInUser, setLoggedInUser} = useContext(UserContext)
+  const { loggedInUser, setLoggedInUser } = useContext(UserContext)
   return (
     <nav className="navbar navbar-expand-lg navbar-light">
       <a className="navbar-brand" href="/home">
-          <img style={{width: '150px'}} src={logo} alt=""/>
+        <img style={{ width: '150px' }} src={logo} alt="" />
       </a>
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
@@ -32,12 +32,15 @@ const Navbar = () => {
             <a className="nav-link mr-5" href="/#">Contact Us</a>
           </li>
           <li className="nav-item">
-            {
-              loggedInUser.email ?
+
+            <Link to="/login"><button className="btn btn-dark px-4">Login</button></Link>
+
+            {/* {
+              loggedInUser.isSignIn ?
               <Link onClick={() => setLoggedInUser({})} to="/home"><button className="btn btn-dark px-4">Log Out</button></Link>
               :
               <Link to="/login"><button className="btn btn-dark px-4">Login</button></Link>
-            }
+            } */}
           </li>
         </ul>
       </div>

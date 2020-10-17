@@ -24,10 +24,11 @@ const Login = () => {
   const googleSignIn = () => {
     firebase.auth().signInWithPopup(provider)
       .then(result => {
-        const {displayName, email} = result.user;
+        const {displayName, email, photoURL} = result.user;
         const signInUser = {
           name: displayName,
           email: email,
+          img: photoURL,
           isSignIn: true,
         }
         setLoggedInUser(signInUser)

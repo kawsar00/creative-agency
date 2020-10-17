@@ -19,7 +19,7 @@ import MakeAdmin from './Components/AdminDashboard/MakeAdmin/MakeAdmin';
 export const UserContext = createContext()
 
 function App() {
-  const [loggedInUser, setLoggedInUser] = useState({})
+  const [loggedInUser, setLoggedInUser] = useState({ isSignIn: false })
   return (
     <UserContext.Provider value={{ loggedInUser, setLoggedInUser }}>
       <Router>
@@ -29,9 +29,6 @@ function App() {
           </Route>
           <Route path="/home">
             <Home></Home>
-          </Route>
-          <Route path="/login">
-            <Login></Login>
           </Route>
           <PrivateRoute path="/dashboard">
             <Dashboard></Dashboard>
@@ -54,6 +51,9 @@ function App() {
           <PrivateRoute path="/makeAdmin">
             <MakeAdmin></MakeAdmin>
           </PrivateRoute>
+          <Route path="/login">
+            <Login></Login>
+          </Route>
           <Route path="*">
             <NoMatch></NoMatch>
           </Route>
