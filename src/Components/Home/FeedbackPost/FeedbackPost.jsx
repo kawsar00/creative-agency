@@ -4,7 +4,7 @@ const FeedbackPost = (props) => {
   const { name, service, details } = props.feedback
 
   return (
-    <div className="col-md-4 col-sm-6">
+    <div className="col-md-4 col-sm-6 my-3">
       <div className="card shadow-sm ">
       <div className="card-header d-flex align-items-center">
         <div className="mt-3">
