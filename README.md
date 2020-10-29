@@ -15,7 +15,7 @@ It's a full stack single page web application where people can order any softwar
 * Admin can change the order’s status to notify the clients about progress.
 * Admin can add a new admin.
 
-### Front-end Thechnology : 
+### Front-end Thechnology 
 * React.js
 * React-hook-form
 * React-slick-carousal
