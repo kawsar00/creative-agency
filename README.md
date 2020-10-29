@@ -1,6 +1,6 @@
 # Creative Agency
-### A full MERN stack Online Course Website
-It's a full MERN stack Web Application where anyone can see which services we are providing and can place a order with project details and budget by clicking a service. In cilent page, anycone can see their order, place a order and give a feedback. In admin dashboard (which is open for now), you can see all orders placed by the clients, delete or edit any order, add a new service with service details. Also you can create another Admin of this site.
+### A Service Management Web Application
+It's a full stack single page web application where people can order any software service and manage his/her order from user dashboard. An Admin can access data, add new service, make new admin from admin dashboard. An admin and user can be detected by firebase authentication
 
 [Live Website](https://creative-agency-5d0a0.web.app/) | [Back-end Repository](https://github.com/kawsar00/creative-agency-server)
 
