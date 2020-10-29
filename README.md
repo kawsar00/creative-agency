@@ -12,7 +12,7 @@ It's a full stack single page web application where people can order any softwar
 * User can see the progress status of his order.
 * A dashboard is available for authenticated admin.
 * Admin can add new services
-* Admin can change order’s status to notify the clients about progress.
+* Admin can change the order’s status to notify the clients about progress.
 * Admin can add a new admin.
 
 ### Front-end Thechnology : 
