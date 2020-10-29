@@ -5,21 +5,31 @@ It's a full stack single page web application where people can order any softwar
 [Live Website](https://creative-agency-5d0a0.web.app/) | [Back-end Repository](https://github.com/kawsar00/creative-agency-server)
 
 ### Features
-* Order food from the menu
-* Sign Up to place order
-* Pay online using your credit card
+* Responsive UI
+* Firebase authentication
+* Authenticated users can order a specific service.
+* User can see the services provided by the agency.
+* User can see the progress status of his order.
+* A dashboard is available for authenticated admin.
+* Admin can add new services
+* Admin can change order’s status to notify the clients about progress.
+* Admin can add a new admin.
 
 ### Front-end Thechnology : 
 * React.js
+* React-hook-form
+* React-slick-carousal
+* React-router
+* Firebase Athuentication 
 * Bootstrap4
-* CSS3
+* Custom CSS
 
 ### Backend Technology
 * Node.js
 * Express.js
 * MongoDB
-* Firebase Athuentication 
-* Stripe.js
+* Base64
+* Heroku deploy
 
 ### Steps to run this project in your local environment:
 
