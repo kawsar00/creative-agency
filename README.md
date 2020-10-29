@@ -1,6 +1,6 @@
 # Creative Agency
 ### A Service Management Web Application
-It's a full stack single page web application where people can order any software service and manage his/her order from user dashboard. An Admin can access data, add new service, make new admin from admin dashboard. An admin and user can be detected by firebase authentication
+It's a full stack single page web application where people can order any software service and manage it from dashboard. An Admin can access data, add new service, make new admin from admin dashboard.
 
 [Live Website](https://creative-agency-5d0a0.web.app/) | [Back-end Repository](https://github.com/kawsar00/creative-agency-server)
 
